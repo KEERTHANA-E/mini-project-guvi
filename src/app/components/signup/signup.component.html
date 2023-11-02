@@ -1,0 +1,23 @@
+<form id="register-form" method="post" [formGroup]="registerForm">
+  <h1>Create an account</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="emailId" formControlName="emailid" />
+    <span style="color: red;" *ngIf="registerForm.get('emailid')?.dirty && !registerForm.get('emailid')?.valid">Please enter
+      valid emailId</span>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>UserName</mat-label>
+    <input matInput placeholder="username" formControlName="username"/>
+    <span style="color: red;" *ngIf="registerForm.get('username')?.dirty && !registerForm.get('username')?.valid">Please enter
+      valid username</span>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput  placeholder="password" formControlName="password">
+    <span style="color: red;" *ngIf="registerForm.get('password')?.dirty && !registerForm.get('password')?.valid">Please enter
+      valid password</span>
+  </mat-form-field>
+  <button type="submit" (click)="signup()">Register</button>
+  <p>Already have an account? <a routerLink="/signin" id="toggle-signin">Sign in</a></p>
+</form>

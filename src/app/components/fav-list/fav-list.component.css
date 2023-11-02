@@ -1,0 +1,20 @@
+.no-results {
+    color: #ff0000; /* sets the text color to red */
+    font-weight: bold; /* makes the text bold */
+    font-size: 1.2rem; /* increases the font size to 1.2rem */
+    text-align: center; /* centers the text horizontally */
+    /* margin: 1rem 0; adds a margin of 1rem on top and bottom */
+  }
+  .fav-img {
+    width: 50%;
+    height: auto;
+  }
+  /* @media (max-width: 986px) {
+    .fav-img {
+      width: 50%;
+      height: auto;
+    }
+    .no-results{
+      text-align: center;
+    }
+  } */

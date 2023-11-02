@@ -1,0 +1,17 @@
+<form id="signin-form" class="example-form" [formGroup]="loginForm">
+  <h1>Sign in to your account</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>UserName</mat-label>
+    <input matInput placeholder="username" formControlName="username"/>
+    <span style="color: red;" *ngIf="loginForm.get('username')?.dirty && !loginForm.get('username')?.valid">Please enter
+      valid username</span>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput  placeholder="password" formControlName="password">
+    <span style="color: red;" *ngIf="loginForm.get('password')?.dirty && !loginForm.get('password')?.valid">Please enter
+      valid password</span>
+  </mat-form-field>
+  <button type="submit" (click)="signin()">Sign in</button>
+  <p>Don't have an account? <a routerLink="/signup">Create one</a></p>
+</form>
